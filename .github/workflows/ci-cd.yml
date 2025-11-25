@@ -112,11 +112,10 @@ jobs:
         python -m unittest pruebas/test_operaciones.py -v
         
     - name: Desplegar en Render
-      run: echo "Este paso está comentariado"
-      #uses: johnbeynon/render-deploy-action@v0.0.8
-      #with:
-        #service-id: ${{ secrets.RENDER_SERVICE_ID }}
-        #api-key: ${{ secrets.RENDER_API_KEY }}
+      uses: johnbeynon/render-deploy-action@v0.0.8
+      with:
+        service-id: ${{ secrets.RENDER_SERVICE_ID }}
+        api-key: ${{ secrets.RENDER_API_KEY }}
         
     - name: Verificar despliegue
       run: |
