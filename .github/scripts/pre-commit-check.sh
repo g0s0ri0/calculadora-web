@@ -30,6 +30,6 @@ fi
 # Verificar que la aplicación inicia correctamente
 echo "🚀 Verificando inicio de la aplicación..."
 #timeout 5s python3 app.py & || true
-#timeout 5s python3 app.py || true
+timeout 5s python3 app.py || true
 
 echo "✅ Verificaciones completadas exitosamente!"
